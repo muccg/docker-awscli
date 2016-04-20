@@ -2,8 +2,7 @@
 
 set -e
 
-VERSION="latest"
-IMAGE="muccg/awscli:$VERSION"
+IMAGE="muccg/s3cmd"
 
 # Setup options for connecting to docker host
 if [ -z "$DOCKER_HOST" ]
