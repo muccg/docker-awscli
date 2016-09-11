@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  awscli:
+    build:
+      context: ./
+      args:
+        ARG_AWSCLI_VERSION: ${DOCKER_AWSCLI_VERSION}
+    image: muccg/awscli
+    volumes:
+      - ${HOME}/.aws:/data/.aws
+    restart: always
