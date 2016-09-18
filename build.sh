@@ -10,7 +10,7 @@ set -a
 : ${DOCKER_USE_HUB:="0"}
 
 DATE=`date +%Y.%m.%d`
-DOCKER_AWSCLI_VERSION=1.10.63
+DOCKER_AWSCLI_VERSION=1.10.65
 
 
 ci_docker_login() {
