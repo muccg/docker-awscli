@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+  dev:
+    build:
+      context: ./
+      args:
+        ARG_AWSCLI_VERSION: ${DOCKER_AWSCLI_VERSION}
+    image: muccg/awscli:${GIT_BRANCH}
+
+  prod:
+    build:
+      context: ./
+      args:
+        ARG_AWSCLI_VERSION: ${DOCKER_AWSCLI_VERSION}
+    image: muccg/awscli:${DOCKER_AWSCLI_VERSION}
+
+  latest:
+    extends:
+      file: docker-compose-build.yml
+      service: prod
+    image: muccg/awscli:latest
