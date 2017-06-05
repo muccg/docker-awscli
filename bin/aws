@@ -2,7 +2,6 @@
 awscli="docker run --rm \
                    --interactive \
                    --tty \
-                   --net host \
                    -v "${HOME}/.aws:/data/.aws" \
                    -v "$(pwd):$(pwd)" \
                    -w $(pwd) \
