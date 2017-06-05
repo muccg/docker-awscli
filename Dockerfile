@@ -1,4 +1,4 @@
-FROM python:3.5-alpine
+FROM python:3.6-alpine
 MAINTAINER https://github.com/muccg
 
 ARG ARG_AWSCLI_VERSION
