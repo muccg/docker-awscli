@@ -1,5 +1,15 @@
+# https://aws.amazon.com/cli/
+#
+# docker run --rm \
+#        --interactive \
+#        --tty \
+#        -v "${HOME}/.aws:/data/.aws" \
+#        -v "$(pwd):$(pwd)" \
+#        -w $(pwd) \
+#        -it muccg/awscli
+#
 FROM python:3.6-alpine
-MAINTAINER https://github.com/muccg
+LABEL maintainer "https://github.com/muccg"
 
 ARG ARG_AWSCLI_VERSION
 
