@@ -24,7 +24,7 @@ RUN apk --no-cache add \
     groff \
     less
 
-RUN pyvenv $VIRTUAL_ENV \
+RUN python3.6 -m venv $VIRTUAL_ENV \
     && $VIRTUAL_ENV/bin/pip install --upgrade \
     pip==$PYTHON_PIP_VERSION \
     awscli==$ARG_AWSCLI_VERSION
